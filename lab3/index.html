@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+      .tracks {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 500px;
+      }
+
+      .track {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 40px;
+        width: 100%;
+      }
+
+      .track button {
+        width: 20%;
+        height: 30px;
+      }
+
+      .track .sounds {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        height: 100%;
+        margin-left: 30px;
+      }
+
+      .track .sounds div {
+        box-sizing: border-box;
+        padding-top: 15px;
+        width: 20px;
+        height: 100%;
+        text-align: center;
+        border-bottom: 5px solid black;
+      }
+
+      .track input {
+        margin-left: 40px;
+      }
+
+      audio {
+        display: none;
+      }
+
+      .controls {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+      }
+
+      .controls > * {
+        width: 100%;
+      }
+
+      .metronom {
+        display: flex;
+        width: 200px;
+        justify-content: space-around;
+      }
+
+      .metronom .plus,
+      .metronom .minus{
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        background: #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .metronom .speed{
+        line-height: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <audio src="./sounds/clap.wav" controls id="s1"></audio>
+    <audio src="./sounds/hihat.wav" controls id="s2"></audio>
+    <audio src="./sounds/boom.wav" controls id="s3"></audio>
+    <audio src="./sounds/kick.wav" controls id="s4"></audio>
+    <audio src="./sounds/openhat.wav" controls id="s5"></audio>
+    <audio src="./sounds/ride.wav" controls id="s6"></audio>
+    <audio src="./sounds/snare.wav" controls id="s7"></audio>
+    <audio src="./sounds/tink.wav" controls id="s8"></audio>
+    <audio src="./sounds/tom.wav" controls id="s9"></audio>
+
+    <div class="controls">
+      <button class="add">ADD TRACK</button>
+      <button class="play">PLAY</button>
+      <label for="loop"
+        >SHOULD LOOP? <input type="checkbox" name="loop" id="loop"
+      /></label>
+      <div class="metronom">
+        <div class="minus">-</div>
+        <div class="speed"><span>60</span>BPM</div>
+        <div class="plus">+</div>
+      </div>
+    </div>
+
+    <div class="tracks"></div>
+
+    <script src="drumkit.js"></script>
+  </body>
+</html>
