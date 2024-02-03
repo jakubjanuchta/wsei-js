@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .distanceContainer {
+        display: flex;
+      }
+
+      #canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+        <button id="start">Start</button>
+        <button id="reset">Reset</button>
+      </div>
+
+      <div class="distanceContainer">
+        <label for="distance">Change distance</label>
+        <input type="range" id="distanceRange" min="5" max="200" value="100" />
+        <span id="distanceValue">100</span>
+      </div>
+
+      <canvas id="canvas" width="1000" height="500"></canvas>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
