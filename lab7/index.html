@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pogoda</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+
+      main {
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+      }
+
+      .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .input_new {
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .cities_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .city {
+        padding: 10px;
+        margin: 5px;
+        background-color: #f4f4f4;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form class="form">
+        <input type="text" name="city" class="input_new" />
+        <input type="submit" value="Add city to list" />
+      </form>
+
+      <div class="cities_list"></div>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
